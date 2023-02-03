@@ -1,0 +1,22 @@
+<section class="service-list" aria-label="Service List">
+    <article>
+        {% for service in serviceList %}
+        {% if loop.index == 1 %}
+        <div class="service-item">
+        {% else %}
+        <div class="service-item collapsed">
+        {% endif %}
+            <h2 class="service-title">{{ service.title }}</h2>
+            <div class="service-description">
+                <p>{{service.description}}</p>
+                <figure class="image-container">
+                    <img class="service-image" src="img/service/{{service.image}}" alt="{{service.imageDescription}}" />
+                </figure>
+            </div>
+            <div class="service-control-group">
+                <button class="service-request-button">Izsaukt meistaru</button>
+            </div>
+        </div>
+        {% endfor %}
+    </article>
+</section>

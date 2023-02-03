@@ -1,0 +1,138 @@
+.service-list {
+    display: flex;
+    width: 95%;
+
+    @media (min-width: 768px) {
+        width: 90%;
+    }
+
+    @media (min-width: 1024px) {
+        width: 75%;
+    }
+
+    @media (min-width: 1366px) {
+        width: 50%;
+    }
+}
+
+.service-list article {
+    width: 100%;
+}
+
+.service-item {
+    background-color: rgba(255,255,255,0.5);
+    background-blend-mode: color-burn;
+    box-shadow: 5px 5px rgba(213, 102, 32, 0.2);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+    transition: .3s;
+}
+
+.service-item.collapsed {
+    .service-title {
+        &::after {
+            transform: rotate(-90deg);
+        } 
+    }
+}
+
+.service-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    cursor: pointer;
+    color: white;
+    font-size: 25px;
+    font-weight: 300;
+    padding: 10px 20px;
+    margin: 0 0 20px 0;
+    background-color: rgba(213, 102, 32, 1);
+
+    &::after {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-image: url('/img/icon/caret-white.svg');
+    }
+}
+
+.service-description {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+
+    p {
+        max-width: 500px;
+    }
+
+    p:first-child {
+        margin-top: 0;
+    }
+
+    @media (min-width: 768px) {
+        font-size: 18px;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 20px;
+    }
+}
+
+.image-container {
+    display: flex;
+    margin: 0;
+    justify-content: flex-end;
+
+    @media (min-width: 768px) {
+        min-width: 300px;
+    }
+}
+
+.service-image {
+    clip-path: circle(50%);
+    
+    // padding: 20px;
+    // padding-top: 0;
+}
+
+.service-control-group {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 20px;
+}
+
+.service-request-button {
+    font-size: 14px;
+    font-weight: 900;
+    font-family: 'Cabin Condensed', sans-serif;
+    border: 0;
+    padding: 10px 20px;
+    background-color: rgba(213, 102, 32, 1);
+    color: white;
+    cursor: pointer;
+    
+    &:hover {
+        opacity: .9;
+    }
+}
+
+.service-item.collapsed {
+    width: 100%;
+    padding-bottom: 0;
+
+    .service-title {
+        margin: 0;
+    }
+
+    .service-description,
+    .service-image,
+    .service-control-group {
+        clip-path: circle(0);
+        height: 0;
+        margin: 0;
+        padding: 0;
+    }
+}

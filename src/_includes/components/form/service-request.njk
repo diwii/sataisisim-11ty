@@ -1,0 +1,36 @@
+<form class="contact-form disabled" id="contact-form">
+    <h2 class="contact-form-title">Izsaukt Meistaru</h2>
+    <div class="contact-form-control-group">
+        <label class="contact-form-label" for="contact-email">Jūsu e-pasts *</label>
+        <input class="contact-form-input" type="text" id="contact-email" name="contact-email" placeholder=""  />
+    </div>
+    <div class="contact-form-control-group">
+        <label class="contact-form-label" for="contact-location">Objekta atrašanās vieta</label>
+        <input class="contact-form-input" type="text" id="contact-location" name="contact-location" placeholder="Pilsēta, rajons" />
+    </div>
+    <div class="contact-form-control-group">
+        <label class="contact-form-label" for="contact-content">Apraksts *</label>
+        <textarea class="contact-form-textarea" id="contact-content" name="contact-content" placeholder="" ></textarea>
+    </div>
+    <div class="contact-form-control-group">
+        <label class="contact-form-label" for="contact-name">Jūsu Vārds</label>
+        <input class="contact-form-input" type="text" id="contact-name" name="contact-name" placeholder="" />
+    </div>
+    <div class="contact-form-control-group">
+        <label class="contact-form-label" for="contact-phone">Telefona nr.</label>
+        <input class="contact-form-input" type="text" id="contact-phone" name="contact-phone" placeholder="" />
+    </div>
+    <div class="contact-form-control-group">
+        <div class="g-recaptcha" data-sitekey="{{ googleSiteKey }}"></div>
+    </div>
+    <div class="contact-form-control-group contact-form-submit-group">
+        <input class="contact-form-submit-button" id="contact-submit" type="submit" value="Nosūtīt Pieprasījumu">
+    </div>
+    <section class="contact-form-success hide" id="contact-form-success">
+        <img class="contact-form-success-image" src="img/sataisisim-logo-300.png" title="Sataisisim" alt="sataisisim.lv logo" />
+        <p class="contact-form-success-text">Paldies, pieprasījums nosūtīts.</p>
+    </section>
+
+    <p class="contact-form-caption">* - obligātie lauki</p>
+    <ul class="contact-form-error-list" id="contact-form-error-list"></ul>
+</form>

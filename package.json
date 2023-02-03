@@ -1,0 +1,25 @@
+{
+  "name": "sataisisim-11ty",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.2",
+    "autoprefixer": "^10.4.13",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.19",
+    "postcss-cli": "^10.0.0",
+    "sass": "^1.56.1"
+  },
+  "scripts": {
+    "watch:sass": "npx sass --watch src/styles:_site/css",
+    "build:sass": "npx sass src/styles:_site/css",
+    "start:eleventy": "npx @11ty/eleventy --serve",
+    "build:eleventy": "npx @11ty/eleventy",
+    "start": "npx npm-run-all build:sass --parallel watch:sass start:eleventy",
+    "build": "npx npm-run-all build:* && npx postcss _site/css/*.css --use autoprefixer -r"
+  },
+  "author": "",
+  "license": "ISC"
+}

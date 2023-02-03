@@ -1,0 +1,8 @@
+---
+layout: base
+---
+<main class="single-column-main-content">
+    {{ content | safe }}
+    {% include '../components/service/list.njk' %}
+    {% include '../components/form/service-request.njk' %}
+</main>

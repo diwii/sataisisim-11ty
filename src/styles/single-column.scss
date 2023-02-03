@@ -1,0 +1,33 @@
+.single-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+
+.single-column-page-header {
+    min-height: 100px;
+    width: 100%;
+    display: block;
+}
+
+.single-column-main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 10;
+    width: 100%;
+    // height: 100%;
+
+    @media (min-width: 1366px) {
+        flex-direction: row;
+        align-items: flex-start;
+        width: calc(100% - 40px);
+        gap: 20px;
+    }
+}
+
+.single-column-page-footer {
+
+}

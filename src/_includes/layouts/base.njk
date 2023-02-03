@@ -1,0 +1,46 @@
+---
+title: Main Page Title Goes Here
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/single-column.css">
+    <link rel="stylesheet" href="css/page-header.css">
+    <link rel="stylesheet" href="css/page-footer.css">
+    <link rel="stylesheet" href="css/contact-form.css">
+    <link rel="stylesheet" href="css/notification.css">
+    <link rel="stylesheet" href="css/service-list.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet"></link>
+    <script defer src="js/form-handler.js"></script>
+    <script defer src="js/scroll-to-form.js"></script>
+    <script defer src="js/service-title.js"></script>
+    <script async defer src="https://www.google.com/recaptcha/api.js"></script>
+    <title>{{ title }}</title>
+</head>
+<body class="single-column">
+    {# <div class="notification-area"></div> #}
+    <header class="single-column-page-header page-header">
+        <h1 class="page-header-heading">Sataisīsim</h1>
+        <p class="page-header-description">Meistars ar sirdi un dvēseli</p>
+    </header>
+    {{ content | safe }}
+    <footer class="single-column-page-footer page-footer">
+        <section class="page-footer-action-section">
+            <a class="page-footer-action-section-call" href="tel:+371 26733483" target="_blank" title="Zvanīt meistaram" rel="noopener noreferrer">Zvanīt meistaram</a>
+            <a class="page-footer-action-section-whatsapp" href="https://wa.me/37126733483" target="_blank" title="Rakstīt meistaram uz WhatsApp" rel="noopener noreferrer">Whatsapp</a>
+        </section>
+        <section class="page-footer-contact-section">
+            <ul class="page-footer-contact-section-contact-list">
+                <li>SIA &quot;SATAISĪSIM&quot;</li>
+                <li>Reģistrācijas nr.: LV44103128881</li>
+                <li>Swedbank: LV94HABA0551047322782</li>
+                <li>Adrese: Gulbju iela 20-1, Jūrmala, LV-2008</li>
+            </ul>
+        </section>
+    </footer>
+</body>
+</html>

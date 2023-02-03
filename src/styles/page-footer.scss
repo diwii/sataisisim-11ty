@@ -1,0 +1,58 @@
+.page-footer {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    // min-height: 100px;
+    background-color: black;
+    color: orange;
+    font-weight: normal;
+    // text-align: center;
+    background-color: rgba(213, 102, 32, 1);
+    color: white;
+    padding: 10px;
+
+    @media (min-width: 768px) {
+        flex-direction: row-reverse;
+    }
+}
+
+.page-footer-action-section-call,
+.page-footer-action-section-whatsapp {
+    display: flex;
+    font-size: 14px;
+    font-weight: 900;
+    font-family: 'Cabin Condensed', sans-serif;
+    border: 0;
+    padding: 10px 20px;
+    background-color: rgb(80 50 31);
+    color: white;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+
+.page-footer-action-section {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.page-footer-contact-section {
+    align-self: flex-start;
+    width: 100%;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+}
+
+.page-footer-contact-section-contact-list {
+    align-self: flex-start;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+

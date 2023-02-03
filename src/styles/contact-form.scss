@@ -1,0 +1,133 @@
+.contact-form {
+    // margin: 10px;
+    // padding: 10px;
+    width: 95%;
+    // height: 200px;
+    background-color: rgba(255,255,255,0.5);
+    background-blend-mode: color-burn;
+    // box-sizing: content-box;
+    // overflow: hidden;
+    // margin: 10px 20px;
+    box-shadow: 5px 5px rgba(213, 102, 32, 0.2);
+    padding-bottom: 20px;
+    // margin: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+    position: relative;
+
+    @media (min-width: 768px) {
+        width: 90%;
+    }
+
+    @media (min-width: 1024px) {
+        width: 75%;
+    }
+
+    @media (min-width: 1366px) {
+        width: 50%;
+    }
+
+    transition: .3s;
+    outline: #4CAF50 solid 0;
+}
+
+.contact-form.outlined {
+    outline: #4CAF50 solid 10px;
+}
+
+.contact-form.disabled .contact-form-control-group,
+.contact-form.disabled .contact-form-caption {
+    opacity: 0;
+    height: 0;
+    margin: 0;
+}
+
+.contact-form-title {
+    color: white;
+    font-size: 25px;
+    font-weight: 300;
+    padding: 10px 20px;
+    margin: 0 0 20px 0;
+    background-color: rgba(213, 102, 32, 1);
+    // position: absolute;
+    // transform: translate3d(0, -50px, 0);
+}
+
+.contact-form-control-group {
+    // display: flex;
+    margin: 20px;
+    // padding: 20px;
+
+    &.hide {
+        margin: 0;
+    }
+}
+
+.contact-form-input {
+    display: block;
+    // border: 1px solid rgba(213, 102, 32, 1);
+    // background-color: rgba(255,255,255,.5);
+    // padding: 10px;
+    // margin: 20px;
+}
+
+.contact-form-input,
+.contact-form-textarea {
+    display: block;
+    padding: 10px;
+    border: 1px solid rgba(213, 102, 32, 1);
+    background-color: rgba(255,255,255,.5);
+    width: 100%;
+}
+
+.contact-form-label {
+    // width: 10%;
+    display: block;
+    color: rgb(104 0 0);
+    // display: none;
+}
+
+.contact-form-submit-button {
+    font-size: 20px;
+    font-weight: 900;
+    font-family: 'Cabin Condensed', sans-serif;
+    border: 0;
+    padding: 10px 20px;
+    background-color: rgba(213, 102, 32, 1);
+    color: white;
+    cursor: pointer;
+    
+    &:hover {
+        opacity: .9;
+    }
+}
+
+.contact-form-submit-group {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contact-form-caption {
+    padding: 0;
+    margin: 0;
+    padding-left: 10px;
+    font-size: 10px;
+    color: rgb(213, 102, 32);
+}
+
+.contact-form-error-list {
+    color: rgb(80, 50, 31);
+    margin: 0;
+}
+
+.contact-form-success {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-after-form {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
