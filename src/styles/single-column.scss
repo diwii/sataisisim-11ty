@@ -28,6 +28,12 @@
     }
 }
 
+.single-column-main-content.middle {
+    @media (min-width: 1366px) {
+        justify-content: center;
+    }
+}
+
 .single-column-page-footer {
 
 }
